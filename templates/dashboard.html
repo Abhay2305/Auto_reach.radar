@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Email Tracking Dashboard</title>
+  <style>
+    body { font-family: Arial; padding: 20px; }
+    table { border-collapse: collapse; width: 100%; }
+    th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+    th { background-color: #f2f2f2; }
+    tr:hover { background-color: #f9f9f9; }
+  </style>
+</head>
+<body>
+  <h2>Email Tracking Dashboard</h2>
+  <table>
+    <tr>
+      <th>Email</th>
+      <th>Tracking ID</th>
+      <th>Event</th>
+      <th>Time</th>
+    </tr>
+    {% for event in events %}
+    <tr>
+      <td>{{ event.email }}</td>
+      <td>{{ event.tracking_id }}</td>
+      <td>{{ event.event }}</td>
+      <td>{{ event.time }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+</body>
+</html>
