@@ -26,7 +26,7 @@ sender_accounts = [
 ]
 
 linkedin_url = "https://www.linkedin.com/in/abhaypadavi01"
-TRACKING_SERVER = "http://127.0.0.1:5000"  # Change to your deployed server URL on Render
+TRACKING_SERVER = "https://auto-reach-radar.onrender.com"  # Change to your deployed server URL on Render
 drive_link = "https://drive.google.com/file/d/1bemImkvQ62BP3glYnm8b88p9jcQsTDG0/view?usp=drive_link"
 
 subject_template = "Application for Technical Jobs - Passionate Software Engineer Seeking Opportunity"
@@ -179,3 +179,4 @@ if __name__ == "__main__":
     )
 
     main()
+
