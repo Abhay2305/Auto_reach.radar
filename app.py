@@ -23,7 +23,7 @@ def pixel():
 def redirect_link():
     tracking_id = request.args.get('id')
     email = request.args.get('email')
-    target_url = request.args.get('url', 'https://www.google.com')
+    target_url = request.args.get('target', 'https://www.google.com')
     log_event(email, tracking_id, 'CLICK')
     return redirect(target_url)
 
@@ -50,3 +50,4 @@ def log_event(email, tracking_id, event_type):
 
 if __name__ == '__main__':
     app.run(debug=True)
+
