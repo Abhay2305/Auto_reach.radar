@@ -9,6 +9,7 @@ import sys
 import uuid
 import fitz
 import os
+from urllib.parse import quote
 
 # PDF containing the contacts
 PDF_FILE = "book1.pdf"
@@ -89,7 +90,7 @@ def send_email(from_account, to_email, name):
             tracking_id = generate_tracking_id()
 
             open_pixel_url = f"{TRACKING_SERVER}/pixel?id={tracking_id}&email={to_email}"
-            tracked_link = f"https://auto-reach-radar.onrender.com/redirect?id={tracking_id}&email={to_email}&url={drive_link}"
+            tracked_link = f"https://auto-reach-radar.onrender.com/redirect?id={tracking_id}&email={to_email}&target={quote(drive_link)}"
 
             email_body_html = body_template.format(
                 name=name,
@@ -179,4 +180,5 @@ if __name__ == "__main__":
     )
 
     main()
+
 
