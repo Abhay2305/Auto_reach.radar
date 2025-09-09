@@ -2,7 +2,8 @@ flask
 gunicorn
 yagmail
 PyMuPDF
-psycopg2-binary
+
+
 
 
 
